@@ -1,63 +1,46 @@
-📊 ##Data Warehouse & Analytics: Medallion Architecture Project
+# 📊 Data Warehouse & Analytics: Medallion Architecture Project
 
-🚀 ###Project Overview
-This project demonstrates a robust, end-to-end Data Warehouse solution built on MS SQL Server. Moving from raw CSV sources (ERP & CRM) to a refined Gold Layer, I implemented the Medallion Architecture to ensure data integrity, scalability, and high-performance analytics.
+## 🚀 Project Overview
+This project demonstrates a comprehensive, end-to-end Data Warehouse solution built on **MS SQL Server**. Utilizing the **Medallion Architecture**, I transformed raw, fragmented data from ERP and CRM systems into a high-performance analytical environment.
 
-As an Aerospace Engineer transitioning into Data, I applied a "Safety-Critical" mindset to data quality—ensuring that every transformation is documented, tested, and optimized for business decision-making.
+As an **Aerospace Engineer transitioning to Data Analytics**, I built this project with a focus on structural integrity, precision, and actionable insights.
 
-🏗️ ###Data Architecture
-The project follows a tiered approach to transform raw data into business intelligence:
+---
 
-Bronze Layer (Raw): Ingestion of disparate CSV files from ERP and CRM systems into SQL Server.
+## 🏗️ Data Architecture
+The project is structured into three distinct layers to ensure a "single source of truth":
 
-Silver Layer (Cleaned): Data deduplication, handling null values, and normalizing formats (Date/Currency).
+* **Bronze Layer (Raw)**: Direct ingestion of CSV datasets into SQL Server.
+* **Silver Layer (Cleaned)**: Standardization of data types, deduplication, and handling of missing values.
+* **Gold Layer (Curated)**: A **Star Schema** consisting of Fact and Dimension tables, optimized for complex analytical joins.
 
-Gold Layer (Curated): A high-performance Star Schema optimized for analytical queries and BI tools.
+### 🖼️ High-Level Architecture
+![High Level Architecture](https://github.com/user-attachments/assets/e08927cb-ae6e-411c-b23b-e91c44d59ed1)
 
-🖼️ ###High-Level Architecture
-🔍 ###Exploratory Data Analysis (EDA) & Insights
-Beyond the engineering, I conducted deep-dive analysis to extract value from the data:
+---
 
-Customer Behavior: Segmented CRM data to identify high-value demographics and purchasing patterns.
+## 🔍 Exploratory Data Analysis (EDA) & Business Insights
+The project goes beyond ETL to deliver business value through SQL-driven analytics:
 
-Product Performance: Analyzed sales trends to pinpoint top-performing categories and seasonal fluctuations.
+### **1. Data Profiling & Cleaning (EDA)**
+* Identified and resolved data quality issues (e.g., null handling in CRM records).
+* Validated referential integrity between ERP sales records and CRM customer profiles.
 
-Data Integrity Reports: Created SQL scripts to identify "Orphaned Records" between the ERP and CRM systems during the integration phase.
+### **2. Business Intelligence (BI)**
+* **Customer Behavior**: Segmented customers based on purchasing patterns and geographic data.
+* **Product Performance**: Analyzed top-grossing products and seasonal sales trends.
+* **Strategic Metrics**: Calculated Year-over-Year (YoY) growth and profit margins using T-SQL window functions.
 
-📂 ###Repository Structure
-Bash
+---
+
+## 📂 Repository Structure
+```bash
 data-warehouse-project/
 ├── datasets/           # Raw ERP & CRM CSV files
-├── docs/               # Architecture diagrams (.drawio) & Data Catalog
+├── docs/               # Architecture diagrams, Data Catalog, & Naming Conventions
 ├── scripts/
-│   ├── bronze/         # DDL scripts for raw data ingestion
-│   ├── silver/         # DML scripts for cleaning & standardization
-│   └── gold/           # Final Fact & Dimension table creation (Star Schema)
-├── tests/              # Data quality & validation scripts
+│   ├── bronze/         # SQL scripts for raw data loading
+│   ├── silver/         # Transformation & cleaning logic
+│   └── gold/           # Analytical Star Schema & Business Views
+├── tests/              # Data validation and quality check scripts
 └── README.md           # Project documentation
-🛠️ ###Technical Stack
-Database: Microsoft SQL Server (MS SQL)
-
-Language: T-SQL (Advanced Joins, CTEs, Window Functions, Stored Procedures)
-
-Modeling: Star Schema (Fact & Dimension Tables)
-
-Tools: Draw.io (Architecture Design), Git/GitHub (Version Control)
-
-🏁 ###How to Run This Project
-Clone the Repo: git clone https://github.com/Utkarsh410/Data-Analysis-Project.git
-
-Environment: Open SQL Server Management Studio (SSMS).
-
-Execution Order:
-
-Run all scripts in /scripts/bronze/ to create the landing zone.
-
-Execute /scripts/silver/ to clean and unify the data.
-
-Execute /scripts/gold/ to build the final analytical layer.
-
-🌟 ###About Me
-Utkarsh Chaudhari Aerospace Engineer | Aspiring Data Analyst I specialize in transforming complex, fragmented datasets into structured, reliable assets. My engineering background provides a unique perspective on process optimization and analytical rigor.
-
-🔗 LinkedIn 🔗 Notion Portfolio
