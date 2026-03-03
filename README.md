@@ -1,4 +1,5 @@
 📊 ##Data Warehouse & Analytics: Medallion Architecture Project
+
 🚀 ###Project Overview
 This project demonstrates a robust, end-to-end Data Warehouse solution built on MS SQL Server. Moving from raw CSV sources (ERP & CRM) to a refined Gold Layer, I implemented the Medallion Architecture to ensure data integrity, scalability, and high-performance analytics.
 
